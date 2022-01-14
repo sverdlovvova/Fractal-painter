@@ -53,7 +53,8 @@ void MainWindow::mouseReleaseEvent(QMouseEvent *e) {
     }
     if (y_2 < y_1) {
         std::swap(y_2, y_1);
-    }                                                                                                                            if (x_2 - x_1 > y_2 - y_1) { x_2 -= (x_2 - x_1 - (y_2 - y_1)); } else { y_2 -= (y_2 - y_1 - (x_2 - x_1)); }
+    }
+    x_2 - x_1 > y_2 - y_1 ? x_2 -= (x_2 - x_1 - (y_2 - y_1)) : y_2 -= (y_2 - y_1 - (x_2 - x_1));
     if (x_1 != x_2 || y_1 != y_2) {
         nx_1 = pix_to_complex_x(x_1);
         nx_2 = pix_to_complex_x(x_2);
